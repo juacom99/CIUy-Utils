@@ -10,7 +10,7 @@ CiUy-Utils is a Utility class that allow the user to validate a CI
     try
     {
         int ci=1234567  
-        int verificationDigit = CIUtil.getVerificationDigit(ci);
+        int verificationDigit = CIUtil.getVerificationDigit(ci); // 2
     }
     catch (CIException ex)
     {
@@ -22,8 +22,10 @@ CiUy-Utils is a Utility class that allow the user to validate a CI
 ```java
     try
     {
-        int ci=1234567  
-        boolean isValidCI = CIUtil.validateCI(ci);
+        int ci=12345678
+        boolean isValidCI = CIUtil.validateCI(ci); // false
+        ci=12345672
+        boolean isValidCI = CIUtil.validateCI(ci); // true
     }
     catch (CIException ex)
     {
