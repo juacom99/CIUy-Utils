@@ -65,13 +65,13 @@ public class CIUtil
     
             
     /**
-     * Return the verificatio digit por a CI
+     * Check if the CI is Valid
      *
      * @param ci - The CI number <b>with</b> the verification digit
      * @throws CIException - If ci is not a 8 digit number
      * @returns true iff the calcuated verification code is equals que verification code pass in the ci
      */
-     public static boolean checkCI(int ci) throws CIException
+     public static boolean validateCI(int ci) throws CIException
     {
         if ((ci + "").matches("^\\d{8}$"))
         {
